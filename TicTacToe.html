@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tik tac toe</title>
+  <style>
+  body{
+    background-color: rgb(204, 255, 255);
+  }
+  h1{
+    text-align: center;
+    color: rgb(255, 26, 26);
+  }
+ .x{
+   color: rgb(255, 0, 191);
+ }
+ .o{
+   color: rgb(0, 255, 0);
+ }
+  #winbox{
+    text-align: center;
+    color: rgb(204, 0, 255);
+  }
+ .contener{
+   height: 320px;
+   width: 320px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 10px;
+   background-color: blue;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+ }
+ .box{
+   height: 100px;
+   width: 100px;
+   background-color: rgb(153, 255, 255);
+   font-size: 90px;
+   text-align: center;
+ }
+ .restart{
+   height: 30px;
+   width: 80px;
+   position: absolute;
+   bottom: 100px;
+   left: 150px;
+   background-color: rgb(179, 255, 204);
+   border-color: rgb(51, 255, 119);
+ }
+  footer{
+    height: 75px;
+    width: 100vw;
+    background-color: rgb(61, 61, 92);
+    color: rgb(255,255,255);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+  }
+  p{
+    margin-left: 30px;
+  }
+  </style>
+</head>
+<body>
+  <div class="headbox">
+    <h1>Tic Tac Toe</h1>
+    <h1 id="winbox"></h1>
+  </div>
+  <div class="contener">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  <button class="restart">Restart</button>
+  <footer>
+    <p>Game : Tik Tac Toe
+      <br>Devloper : Sahil Diwakar
+      <br>Contect no : 8573847432</p>
+    
+  </footer>
+  <script>
+  let gameover = false;
+  let winbox = document.querySelector("#winbox");
+  let boxes = document.querySelectorAll(".box");
+  let turnX = true;
+  for (let box of boxes){
+    box.addEventListener("click",()=>{
+      if(gameover){
+        return;
+      }
+      else if (box.innerText == ""){
+        if(turnX){
+          box.classList.remove("o");
+          box.classList.add("x");
+          box.innerText = "X";
+          turnX = false;
+        }
+        else if (!turnX){
+          box.classList.remove("x");
+          box.classList.add("o");
+          box.innerText = "O";
+          turnX = true;
+        }
+      }
+      checkwin();
+      drow();
+    });
+  }
+  let restart = document.querySelector(".restart");
+  restart.addEventListener("click",()=>{
+    for (let box of boxes){
+      box.innerText = "";
+      gameover = false;
+      winbox.innerText = ""
+    }
+  });
+  function checkwin(){
+    const winpatterns = [
+    [0,1,2],
+    [3,4,5],
+    [6,7,8],
+    [0,3,6],
+    [1,4,7],
+    [2,5,8],
+    [0,4,8],
+    [2,4,6]
+    ];
+    for (pattern of winpatterns){
+      let position1 = boxes[pattern[0]].innerText;
+      let position2 = boxes[pattern[1]].innerText;
+      let position3 = boxes[pattern[2]].innerText;
+      if (position1!= "" && position1 === position2 && position2 === position3){
+        winbox.innerText = "💥🎉Player "+ position1 +" Win🎊💥";
+        gameover = true;
+      }
+    }
+  }
+  function drow(){
+    if (!gameover && [...boxes].every(box => box.innerText!== "")){
+      winbox.innerText = "Match 🤝 Draw";
+    }
+  }
+  </script>
+</body>
+  </html>
