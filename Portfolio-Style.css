@@ -283,7 +283,7 @@
     border: 5px solid #253856;
     border-radius: 20px;
     object-fit: cover;
-    background-image: url("xo.png");
+    background-image: url("./xo.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
