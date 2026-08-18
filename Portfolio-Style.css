@@ -1,0 +1,453 @@
+*{
+    margin: 0px;
+    color: white;
+  }
+  body{
+    background-color: #060B0F;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    align-items: center;
+    gap: 10px;
+  }
+
+
+  /**===============Header Box================**/
+  .headbox{
+    height: 50px;
+    width: 90vw;
+    margin-top: 10px;
+    border: 2px solid #2E3B4A;
+    background: linear-gradient(
+    90deg,
+    #343843,
+    #303241,
+    #3A404F);
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .menu{
+    color: #f2f2f2;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #EAF0F7;  
+  }
+  .glow-bottom-border{
+      border-bottom: 2px solid cyan;
+      color: cyan;
+  }
+
+  /**==============Introduction Box===============**/
+  /**-----Introduction Image-----**/
+   .intro-box{
+   height: 70vh;
+   width: 80vw;
+   display: flex;
+   border: none;
+   color: transparent;
+   flex-direction: column;
+   justify-content: center;
+   gap: 20px;
+  }
+  .intro-image{
+   height: 80vw;
+   width: 80vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 10px;
+  }
+  #image-frame{
+    flex-shrink: 0;
+    height: 60vw;
+    width: 60vw;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 
+      0 0 10px cyan,
+      0 0 15px cyan,
+      0 0 30px blue,
+      0 0 35px #8855CA;
+  }
+  #my-image{
+    height: 60vw;
+    width: 60vw;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  #image-frame::before {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    inset: -5px;
+
+    background: linear-gradient(
+        135deg,
+        cyan,
+        blue,
+        purple
+    );
+
+    filter: blur(50px);
+
+    z-index: -1;
+  }
+  #show-online{
+    height: 8vw;
+    width: 60vw;
+    background-color: #192E3F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #2B3E53;
+    border-radius: 15px;
+    gap: 4px;
+  }
+  #online-text{
+    color: #47BD9A;
+  }
+  /**-----Introduction Text-----**/
+  .intro-text{
+    height: 50vw;
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+  }
+  #intro-text1{
+    font-size: 20px;
+    color: #d9d9d9;
+  }
+  #intro-text2{
+    color: #d9d9d9;
+  }
+  #btn-box{
+    height: 70px;
+    width: 90vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  #view-work-btn{
+    height: 35px;
+    width: 150px;
+    border: 2px solid transparent;
+    background: linear-gradient(
+    135deg,
+    #45B6CE,
+    #647EDD,
+    #9657E6)padding-box,
+    linear-gradient(
+    135deg,
+    #45B6CE,
+    #647EDD,
+    #9657E6)border-box;
+    border-radius: 20px;
+    font-weight: 600;
+  }
+  #contact-btn{
+    height: 35px;
+    width: 150px;
+    border: 2px solid transparent;
+    background:
+        linear-gradient(
+        #060B0F,
+        #060B0F) padding-box,
+        linear-gradient(
+            135deg,
+            #3A4F65,
+            #414E6B,
+            #545F74
+        ) border-box;    
+    border-radius: 20px;
+    color: #6381AB;
+    font-weight: 600;
+  }
+
+
+  /**===============About Me & Skills Contener=================**/
+  #about-skills-contener{
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    overflow-x: scroll;
+    margin-top: 10px;
+  }
+  /**===============About Me Box================**/
+  #about-box{
+    margin: 10px;
+    flex-shrink: 0;
+    height: 60vh;
+    width: 60vw;
+    border: 3px solid transparent;
+    background: linear-gradient(
+    135deg,
+    #264258,
+    #141D26,
+    #12171D,
+    #141821,
+    #27233E)padding-box,
+    linear-gradient(
+    135deg,
+    #3C5A70,
+    #33495B,
+    #131D28,
+    #232732,
+    #3A3B4C,
+    #5B4F75)border-box;
+    border-radius: 15px;
+    line-height: 1.5;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  #about-heading{
+    height: 40px;
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+  }
+  /**==============Skills Box==================**/
+  #skills-box{
+    margin: 10px;
+    flex-shrink: 0;
+    height: 60vh;
+    width: 60vw;
+    border: 3px solid transparent;
+    background: linear-gradient(
+    135deg,
+    #264258,
+    #141D26,
+    #12171D,
+    #141821,
+    #27233E)padding-box,
+    linear-gradient(
+    135deg,
+    #3C5A70,
+    #33495B,
+    #131D28,
+    #232732,
+    #3A3B4C,
+    #5B4F75)border-box;
+    border-radius: 15px;
+    line-height: 1.8;
+    padding: 10px;
+  }
+
+  
+  /**===============Project Contener================**/
+  #project-contener{
+    height: 55vh;
+    width: 100vw;
+    display: flex;
+    overflow-x: scroll;
+    margin-top: 10px;
+  }
+  .project-box{
+    flex-shrink: 0;
+    height: 300px;
+    width: 260px;
+    border: 3px solid transparent;
+    background: linear-gradient(
+    135deg,
+    #141822,
+    #12161D,
+    #13181F,
+    #211B3A)padding-box,
+    linear-gradient(
+    135deg,
+    #344C58,
+    #1E2B35,
+    #151B27,
+    #28263C)border-box;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    margin: 10px;
+  }
+  .image-frame{
+    height: 160px;
+    width: 240px;
+    border: 5px solid #253856;
+    border-radius: 20px;
+    object-fit: cover;
+    background-image: url("images/xo.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .project-image{
+    height: 160px;
+    width: 240px;
+    object-fit: cover;
+  }
+  .project-btn{
+    flex-shrink: 0;
+    height: 80px;
+    width: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .view-live{
+    height: 30px;
+    width: 90px;
+    background-color: #192E3F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #2B3E53;
+    border-radius: 15px;
+    gap: 4px;
+  }
+  .view-code{
+    height: 30px;
+    width: 90px;
+    background-color: #192E3F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #2B3E53;
+    border-radius: 15px;
+    gap: 4px;
+  }
+  /**==============Add here New Project CSS=================**/
+
+
+  /**==============My Experience Box=================**/
+  .heading{
+    margin-right: 120px; 
+  }
+  .exp-text{
+      color: #EFF4F7;
+  }
+  #experience-contener{
+    margin: 10px;
+    flex-shrink: 0;
+    height: 70vh;
+    width: 80vw;
+    border: 3px solid transparent;
+    background: linear-gradient(
+    135deg,
+    #264258,
+    #141D26,
+    #12171D,
+    #141821,
+    #27233E)padding-box,
+    linear-gradient(
+    135deg,
+    #3C5A70,
+    #33495B,
+    #131D28,
+    #232732,
+    #3A3B4C,
+    #5B4F75)border-box;
+    border-radius: 15px;
+    line-height: 1.5;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+
+  /**===============Contect Box================**/
+  #contact-box{
+    margin: 10px;
+    flex-shrink: 0;
+    height: 75vh;
+    width: 90vw;
+    border: 3px solid transparent;
+    background: linear-gradient(
+    135deg,
+    #264258,
+    #141D26,
+    #12171D,
+    #141821,
+    #27233E)padding-box,
+    linear-gradient(
+    135deg,
+    #3C5A70,
+    #33495B,
+    #131D28,
+    #232732,
+    #3A3B4C,
+    #5B4F75)border-box;
+    border-radius: 15px;
+    line-height: 1.5;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  .bg{
+    border: 2px solid transparent;
+    background: linear-gradient(
+    135deg,
+    #292E34,
+    #272C32,
+    #2C2E3A)padding-box,
+    linear-gradient(
+    135deg,
+    #363B41,
+    #31353D,
+    #50535E)border-box;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 20px;
+  }
+  #name{
+    height: 40px;
+    width: 300px;
+  }
+  #email{
+    height: 40px;
+    width: 300px;
+  }
+  #message{
+    height: 100px;
+    width: 300px;
+  }
+  #send-btn{
+    height: 50px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 
+      0 0 5px #3EABC6,
+      0 0 10px #5083C9,
+      0 0 15px #8B50CE;
+  }
+  #contact-icon{
+    height: 50px;
+    width: 300px;
+    font-size: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+   /** margin-right: 30px;  **/
+  }
+  #contact-heading{
+    margin-bottom: 10px;
+    margin-right: 180px;
+  }
